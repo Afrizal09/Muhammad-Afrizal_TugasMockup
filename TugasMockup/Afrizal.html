@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+    <style>
+        span {
+            visibility: hidden;
+        }
+        h1 {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <input id="nama" placeholder="Masukkan nama">
+    <span>Nama tidak boleh kosong</span>
+    <br>
+    <input id="email" placeholder="Masukkan Email Anda">
+    <span>Email tidak boleh kosong</span>
+    <br>
+    <input id="Jam" type="time">
+    <span>Jam keberangkatan tidak boleh kosong</span>
+    <br>
+    <input id="tujuan" placeholder="Tujuan keberangkatan">
+    <span>Tujuan keberangkatan tidak boleh kosong</span>
+    <br>
+    <input id="number" placeholder="Masukkan Jumlah Tiket">
+    <span>Jumlah Tiket tidak boleh kosong</span>
+    <br>
+    <button onclick="proses()">Kirim</button>
+
+    <h1>Sukses</h1>
+    <script>
+        let nama = document.getElementById("nama")
+        let email = document.getElementById("email")
+        let jam = document.getElementById ("jam")
+        let tujuan = document.getElementById ("tujuan")
+        let Jumlah = document.getElementById ("jumlah")
+        let span = document.getElementsByTagName("span")
+
+        function proses() {
+            if (nama.value == "") {
+             span[0].style.visibility = "visible"
+            }
+            if (email.value == "") {
+            span[1].style.visibility = "visible"
+            }
+            if (tujuan.value== "") {
+                span[3].style.visibility = "visible"
+            }
+            if (Jumlah.value== "") {
+                span[4].style.visibility = "visible"
+            }
+            if (span.value== "") {
+                span[5].style.visibility = "visible"
+            }
+
+            }
+
+    </script>
+</body>
+</html>
